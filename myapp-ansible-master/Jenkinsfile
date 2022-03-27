@@ -4,7 +4,7 @@ pipeline {
     stages {
         stage('git') {
             steps {
-                sh 'ansible all -a 'whoami''
+                sh 'ansible -m ping all'
                
             }
         }
