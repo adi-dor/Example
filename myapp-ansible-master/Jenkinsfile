@@ -4,7 +4,7 @@ pipeline {
     stages {
         stage('git') {
             steps {
-                sh 'ansible -m ping all'
+               ansiblePlaybook becomeUser: null, credentialsId: '36cbbbd9-cc83-47ef-976c-53ea9ee922e9', installation: 'ansible', inventory: 'dev.inv', playbook: 'apache.yml', sudoUser: null
                
             }
         }
